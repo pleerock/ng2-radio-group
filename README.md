@@ -1,3 +1,5 @@
+> This repository is for demonstration purposes of how it can be implemented in Angular and is not maintaned. Please fork and maintain your own version of this repository.
+
 # ng2-radio-group
 
 Ultimate set of select components that you ever need. All with angular2, no jquery.
