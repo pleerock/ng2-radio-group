@@ -41,7 +41,7 @@ import {Dropdown} from "./Dropdown";
                  [class.hidden]="readonly || disabled || (!dropdownSelectItems.getItems().length && !searchBy)"
                  tabindex="1">
                 <select-items #dropdownSelectItems
-                    [(ngModel)]="valueAccessor.model" 
+                    [ngModel]="valueAccessor.model" 
                     (ngModelChange)="onModelChange($event)" 
                     [items]="items"
                     [exclude]="exclude"

@@ -58,7 +58,7 @@ export class SelectTagsBoxTemplate {
                 [removeButton]="removeButton && !readonly"
                 [disabled]="disabled"
                 [readonly]="readonly"
-                [(items)]="valueAccessor.model"
+                [items]="valueAccessor.model"
                 (itemsChange)="onItemsChange($event)"
                 (onSelect)="onTagSelect($event)"
                 [customToggleLogic]="selectItemsToggleLogic"
@@ -97,7 +97,7 @@ export class SelectTagsBoxTemplate {
              dropdown-not-closable-zone 
              tabindex="1">
             <select-items #dropdownSelectItems
-                [(ngModel)]="valueAccessor.model" 
+                [ngModel]="valueAccessor.model" 
                 (ngModelChange)="onModelChange($event)"
                 [items]="items"
                 [exclude]="exclude"
@@ -356,6 +356,9 @@ export class SelectTags implements OnInit {
 
     @Input()
     labelBy: string|((item: any) => string);
+
+    @Input()
+    searchBy: string|((item: any, keyword: string) => boolean);
 
     @Input()
     disableBy: string|((item: any) => string);
